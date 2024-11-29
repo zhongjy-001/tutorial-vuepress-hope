@@ -2,6 +2,8 @@ import { HopeIcon, Layout, NotFound, injectDarkmode, setupDarkmode, setupSidebar
 
 import { defineCatalogInfoGetter } from "D:/Codes/tutorial-vuepress-hope/node_modules/.pnpm/@vuepress+plugin-catalog@2.0.0-rc.56_vuepress@2.0.0-rc.18_@vuepress+bundler-vite@2.0.0-rc.18__v5zdnag4ogobvxwqrfxzonru5e/node_modules/@vuepress/plugin-catalog/lib/client/index.js"
 import { h } from "vue"
+import { BlogCategory, BlogHome, BlogType, BloggerInfo, SocialMedias, Timeline, setupBlog } from "D:/Codes/tutorial-vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-rc.59_markdown-it@14.1.0_sass-embedded@1.81.0_vuepress@2.0.0-rc.18__ehyuurfi7tpsodwsctco3ehz74/node_modules/vuepress-theme-hope/lib/bundle/modules/blog/export.js";
+import "D:/Codes/tutorial-vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-rc.59_markdown-it@14.1.0_sass-embedded@1.81.0_vuepress@2.0.0-rc.18__ehyuurfi7tpsodwsctco3ehz74/node_modules/vuepress-theme-hope/lib/bundle/modules/blog/styles/all.scss";
 import { GlobalEncrypt, LocalEncrypt } from "D:/Codes/tutorial-vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-rc.59_markdown-it@14.1.0_sass-embedded@1.81.0_vuepress@2.0.0-rc.18__ehyuurfi7tpsodwsctco3ehz74/node_modules/vuepress-theme-hope/lib/bundle/modules/encrypt/export.js";
 import "D:/Codes/tutorial-vuepress-hope/node_modules/.pnpm/vuepress-theme-hope@2.0.0-rc.59_markdown-it@14.1.0_sass-embedded@1.81.0_vuepress@2.0.0-rc.18__ehyuurfi7tpsodwsctco3ehz74/node_modules/vuepress-theme-hope/lib/bundle/modules/encrypt/styles/all.scss"
 
@@ -38,17 +40,22 @@ export default {
     // provide HopeIcon as global component
     app.component("HopeIcon", HopeIcon);
 
+    app.component("BloggerInfo", BloggerInfo);
+    app.component("SocialMedias", SocialMedias);
     app.component("GlobalEncrypt", GlobalEncrypt);
     app.component("LocalEncrypt", LocalEncrypt);
   },
   setup: () => {
     setupDarkmode();
     setupSidebarItems();
-
+    setupBlog();
   },
   layouts: {
     Layout,
     NotFound,
-
+    BlogCategory,
+    BlogHome,
+    BlogType,
+    Timeline,
   }
 };

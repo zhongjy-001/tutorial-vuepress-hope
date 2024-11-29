@@ -1,5 +1,4 @@
-<template><div><p><code v-pre>more</code> 注释之前的内容被视为文章摘要。</p>
-<!-- more -->
+<template><div><!-- more -->
 <h2 id="页面标题" tabindex="-1"><a class="header-anchor" href="#页面标题"><span>页面标题</span></a></h2>
 <p>The first H1 title in Markdown will be regarded as page title.</p>
 <p>Markdown 中的第一个 H1 标题会被视为页面标题。</p>

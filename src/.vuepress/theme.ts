@@ -7,7 +7,7 @@ export default hopeTheme({
   hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
 
   author: {
-    name: "Mr.Hope",
+    name: "小钟同学",
     url: "https://mister-hope.com",
   },
 
@@ -26,7 +26,7 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "默认页脚",
+  footer: "",
   displayFooter: true,
 
   // 加密配置
@@ -49,10 +49,11 @@ export default hopeTheme({
     // 注意: 仅用于测试! 你必须自行生成并在生产环境中使用自己的评论服务
     comment: {
       provider: "Giscus",
-      repo: "vuepress-theme-hope/giscus-discussions",
-      repoId: "R_kgDOG_Pt2A",
-      category: "Announcements",
-      categoryId: "DIC_kwDOG_Pt2M4COD69",
+      comment: false,
+      repo: 'zhongjy-001/tutorial-vuepress-plume-web',
+      repoId: 'R_kgDONDbVYg',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDONDbVYs4CjtFs',
     },
 
     components: {
@@ -66,6 +67,10 @@ export default hopeTheme({
       size: true,
     },
 
+    blog: {
+      article: '/blog/',
+    },
+    
     // markdownMath: {
     //   // 启用前安装 katex
     //   type: "katex",

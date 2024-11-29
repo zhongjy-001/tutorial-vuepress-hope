@@ -1,8 +1,11 @@
 ---
 # 这是文章的标题
 title: 页面配置
+head:
+  - [meta, { name: keywords, content: 方括号语法 }]
+  - [meta, { name: description, content: descriptionsdfcadf发 }]
 # 你可以自定义封面图片
-cover: /assets/images/cover1.jpg
+# cover: /assets/images/cover1.jpg
 # 这是页面的图标
 icon: file
 # 这是侧边栏的顺序
@@ -27,8 +30,6 @@ footer: 这是测试显示的页脚
 # 你可以自定义版权信息
 copyright: 无版权
 ---
-
-`more` 注释之前的内容被视为文章摘要。
 
 <!-- more -->
 
