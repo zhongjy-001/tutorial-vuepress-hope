@@ -4,18 +4,19 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://www.igoblogs.com",
 
   author: {
     name: "小钟同学",
     url: "https://mister-hope.com",
   },
 
-  iconAssets: "fontawesome-with-brands",
+  // "iconify"、"fontawesome" 和 "fontawesome-with-brand"
+  iconAssets: "iconify",
 
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "zhongjy-001/tutorial-vuepress-hope",
 
   docsDir: "src",
 
@@ -26,7 +27,9 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "",
+  
+  copyright: "MIT 协议 | 版权所有 © 2019-至今 | 一起来编程",
+  footer: `使用 <a href="https://theme-hope.vuejs.press/zh/" target="_blank">VuePress Theme Hope</a> 主题 | 备案号：<a href="https://beian.miit.gov.cn/" target="_blank">渝ICP备2024044330号-1</a>`,
   displayFooter: true,
 
   // 加密配置

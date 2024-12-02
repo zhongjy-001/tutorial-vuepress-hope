@@ -15,24 +15,7 @@ export default {
     
   },
   setup: () => {
-    useScriptTag(
-  `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/js/brands.min.js`,
-  () => {},
-  { attrs: { "data-auto-replace-svg": "nest" } }
-);
-
-    useScriptTag(
-  `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/js/solid.min.js`,
-  () => {},
-  { attrs: { "data-auto-replace-svg": "nest" } }
-);
-
-    useScriptTag(
-  `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/js/fontawesome.min.js`,
-  () => {},
-  { attrs: { "data-auto-replace-svg": "nest" } }
-);
-
+    useScriptTag(`https://cdn.jsdelivr.net/npm/iconify-icon@1`);
   },
   rootComponents: [
 
