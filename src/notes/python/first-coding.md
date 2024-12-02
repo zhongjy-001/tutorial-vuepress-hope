@@ -2,7 +2,7 @@
 title: 第一个Python程序
 createTime: 2024/10/19 21:21:07
 permalink: /notes/python/first-coding.html
-draft: true
+article: false
 ---
 ## 交互模式
 在命令行模式下敲命令python，就看到类似如下的一堆文本输出，然后就进入到Python交互模式，它的提示符是>>>。

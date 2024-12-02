@@ -1,8 +1,8 @@
 ---
 title: Pyton中文教程
-createTime: 2024/10/19 16:23:36
+icon: logos:python
 permalink: /notes/python/
+article: false
 ---
 
-- [bar](./bar.md)
-- [foo](./foo.md)
+<Catalog />

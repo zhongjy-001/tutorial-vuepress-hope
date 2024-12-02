@@ -8,7 +8,7 @@
 <h2 id="selenium环境搭建" tabindex="-1"><a class="header-anchor" href="#selenium环境搭建"><span>Selenium环境搭建</span></a></h2>
 <blockquote>
 <p>我本机是 windows 11，浏览器使用 Edge 来进行测试</p>
-<p>Python建议使用<RouteLink to="/1.python/20241124-how-anaconda.html">环境管理Anaconda</RouteLink>，当前使用的Python3.8</p>
+<p>Python建议使用<RouteLink to="/blog/1.python/20241124-how-anaconda.html">环境管理Anaconda</RouteLink>，当前使用的Python3.8</p>
 </blockquote>
 <CodeTabs id="28" :data='[{"id":"Python"}]'>
 <template #title0="{ value, isActive }">Python</template>
@@ -18,7 +18,7 @@
 </CodeTabs>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
-<p>国内环境如果提示连接不上，可<RouteLink to="/1.python/20241124-set-mirror.html">参考</RouteLink>设置镜像源。当前使用的（2024-11-24）：</p>
+<p>国内环境如果提示连接不上，可<RouteLink to="/blog/1.python/20241124-set-mirror.html">参考</RouteLink>设置镜像源。当前使用的（2024-11-24）：</p>
 <div class="language-sh" data-highlighter="shiki" data-ext="sh" data-title="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">pip</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> selenium</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -i</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> https://pypi.tuna.tsinghua.edu.cn/simple/</span></span></code></pre>
 </div></div>
 <p>安装成功以后，会出现如下界面</p>
