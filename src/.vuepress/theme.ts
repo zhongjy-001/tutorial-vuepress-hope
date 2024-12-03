@@ -14,6 +14,8 @@ export default hopeTheme({
   // "iconify"、"fontawesome" 和 "fontawesome-with-brand"
   iconAssets: "iconify",
 
+  favicon: '',
+
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
 
   repo: "zhongjy-001/tutorial-vuepress-hope",
@@ -26,8 +28,10 @@ export default hopeTheme({
   // 侧边栏
   sidebar,
 
+  // 打印按钮
+  print: true,
+
   // 页脚
-  
   copyright: "MIT 协议 | 版权所有 © 2019-至今 | 一起来编程",
   footer: `使用 <a href="https://theme-hope.vuejs.press/zh/" target="_blank">VuePress Theme Hope</a> 主题 | 备案号：<a href="https://beian.miit.gov.cn/" target="_blank">渝ICP备2024044330号-1</a>`,
   displayFooter: true,
@@ -71,7 +75,7 @@ export default hopeTheme({
     },
 
     blog: {
-      article: '/blog/',
+      article: '/blogs/',
     },
     
     // markdownMath: {

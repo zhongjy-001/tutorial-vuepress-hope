@@ -2,23 +2,23 @@
 <p>Python 中的字符串可以是由   单引号（'），双引号（&quot;）、三单引号（'''）或三双引号（&quot;&quot;&quot;）包围。</p>
 <p><strong>注：以下例子中，都使用推荐的双引号</strong></p>
 <!-- @[code{12-}](../../demo/var-str-create.py) -->
+<!-- include: ../../demo/var-str-create-result.md -->
 <p>::: demo-wrapper title=&quot;运行结果&quot;</p>
-<p>File not found</p>
 <p>:::</p>
 <h2 id="字符串运算" tabindex="-1"><a class="header-anchor" href="#字符串运算"><span>字符串运算</span></a></h2>
 <!-- @[code{12-}](../../demo/var-str-operator.py) -->
+<!-- include: ../../demo/var-str-operator-result.md -->
 <p>::: demo-wrapper title=&quot;运行结果&quot;</p>
-<p>File not found</p>
 <p>:::</p>
 <h2 id="格式化" tabindex="-1"><a class="header-anchor" href="#格式化"><span>格式化</span></a></h2>
 <!-- @[code{12-}](../../demo/var-str-format.py) -->
+<!-- include: ../../demo/var-str-format-result.md -->
 <p>::: demo-wrapper title=&quot;运行结果&quot;</p>
-<p>File not found</p>
 <p>:::</p>
 <h2 id="常见函数" tabindex="-1"><a class="header-anchor" href="#常见函数"><span>常见函数</span></a></h2>
 <!-- @[code{12-}](../../demo/var-str-funcuse.py) -->
+<!-- include: ../../demo/var-str-funcuse-result.md -->
 <p>::: demo-wrapper title=&quot;运行结果&quot;</p>
-<p>File not found</p>
 <p>:::</p>
 <p><strong>使用下列方法可以查看字符串的所有内建函数</strong></p>
 <!-- @[code{4-16}](../../demo/var-str-func.py) -->

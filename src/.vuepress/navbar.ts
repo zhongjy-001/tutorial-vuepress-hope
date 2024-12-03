@@ -9,7 +9,7 @@ export default navbar([
   {
     text: "博客列表",
     icon: "logos:blogger",
-    link: "/blog/",
+    link: "/blogs/",
   },
   // {
   //   text: "C#教程",

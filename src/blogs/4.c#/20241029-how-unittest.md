@@ -4,12 +4,16 @@ icon: logos:blogger
 head:
   - [meta, { name: keywords, content: 方括号语法 }]
   - [meta, { name: description, content: descriptionsdfcadf发 }]
+category:
+  - 编程语言
+  - C#
 tags:
   - c#
   - 单元测试
 copyright: CC-BY-4.0
 createTime: 2024/10/29 14:42:33
 permalink: /blog/csharp/how-unittest.html
+excerpt: 这里的内容会被作为摘要
 ---
 
 > 用 VS2022 中自带的测试模块（MSTest）写一个简单的单元测试

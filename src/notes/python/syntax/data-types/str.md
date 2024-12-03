@@ -13,9 +13,10 @@ Python 中的字符串可以是由   单引号（'），双引号（"）、三�
 
 <!-- @[code{12-}](../../demo/var-str-create.py) -->
 
+<!-- include: ../../demo/var-str-create-result.md -->
+
 ::: demo-wrapper title="运行结果"
 
-<!-- @include: ../../demo/var-str-create-result.md -->
 
 :::
 
@@ -23,9 +24,10 @@ Python 中的字符串可以是由   单引号（'），双引号（"）、三�
 
 <!-- @[code{12-}](../../demo/var-str-operator.py) -->
 
+<!-- include: ../../demo/var-str-operator-result.md -->
+
 ::: demo-wrapper title="运行结果"
 
-<!-- @include: ../../demo/var-str-operator-result.md -->
 
 :::
 
@@ -33,9 +35,10 @@ Python 中的字符串可以是由   单引号（'），双引号（"）、三�
 
 <!-- @[code{12-}](../../demo/var-str-format.py) -->
 
+<!-- include: ../../demo/var-str-format-result.md -->
+
 ::: demo-wrapper title="运行结果"
 
-<!-- @include: ../../demo/var-str-format-result.md -->
 
 :::
 
@@ -43,9 +46,10 @@ Python 中的字符串可以是由   单引号（'），双引号（"）、三�
 
 <!-- @[code{12-}](../../demo/var-str-funcuse.py) -->
 
+<!-- include: ../../demo/var-str-funcuse-result.md -->
+
 ::: demo-wrapper title="运行结果"
 
-<!-- @include: ../../demo/var-str-funcuse-result.md -->
 
 :::
 
