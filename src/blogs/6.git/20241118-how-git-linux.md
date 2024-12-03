@@ -3,7 +3,7 @@ title: Linux下Git的配置使用
 tags:
   - git
   - linux
-createTime: 2024/11/18 00:42:33
+date: 2024-11-18
 permalink: /blog/git/how-git-linux.html
 article: false
 ---

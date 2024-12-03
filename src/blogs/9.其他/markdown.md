@@ -2,7 +2,7 @@
 title: Markdown
 tags:
   - markdown
-createTime: 2024/10/21 14:42:33
+date: 2024-10-21
 permalink: /blog/markdown.html
 article: false
 ---

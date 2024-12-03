@@ -1,6 +1,6 @@
 ---
 title: selenium介绍
-createTime: 2024/10/19 17:19:23
+date: 2024-10-19
 permalink: /notes/python/component/selenium.html
 article: false
 ---

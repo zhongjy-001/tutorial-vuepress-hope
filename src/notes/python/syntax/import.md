@@ -1,6 +1,6 @@
 ---
 title: 5.import包详情
-createTime: 2024/10/19 17:19:23
+date: 2024-10-19
 permalink: /notes/python/syntax/import.html
 article: false
 ---

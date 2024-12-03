@@ -3,7 +3,7 @@ title: Windows下Git的配置使用
 tags:
   - git
   - windows
-createTime: 2024/11/20 11:34:10
+date: 2024-11-20
 permalink: /blog/git/how-git-windows.html
 article: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: 定义变量
-createTime: 2024/10/23 18:05:34
+date: 2024-10-23
 permalink: /notes/python/syntax/variable.html
 article: false
 ---

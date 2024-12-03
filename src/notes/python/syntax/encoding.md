@@ -1,6 +1,6 @@
 ---
 title: encoding
-createTime: 2024/10/23 17:53:32
+date: 2024-10-23
 permalink: /notes/python/syntax/encoding.html
 article: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: 数据类型
-createTime: 2024/10/20 12:02:53
+date: 2024-10-20
 permalink: /notes/python/syntax/data-type/
 article: false
 ---

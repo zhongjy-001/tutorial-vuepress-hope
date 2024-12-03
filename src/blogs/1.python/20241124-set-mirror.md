@@ -1,11 +1,16 @@
 ---
 title: Python怎么设置国内镜像源
-createTime: 2024/11/24 11:53:56
+head:
+  - [meta, { name: keywords, content: python anaconda }]
+  - [meta, { name: description, content: Python使用Selenium的详细步骤 }]
+category:
+  - Python
 tags:
   - python
   - 镜像源
+date: 2024-11-24
 permalink: /blog/python/set-mirror.html
-article: false
+excerpt: Anaconda的安装和使用
 ---
 
 一、国内镜像源 

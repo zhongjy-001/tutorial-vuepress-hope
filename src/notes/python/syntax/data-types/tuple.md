@@ -1,6 +1,6 @@
 ---
 title: tuple
-createTime: 2024/10/27 20:49:37
+date: 2024-10-27
 permalink: /notes/python/syntax/data-type/tuple.html
 article: false
 ---

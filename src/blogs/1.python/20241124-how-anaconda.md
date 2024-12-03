@@ -1,15 +1,17 @@
 ---
 title: Python环境管理Anaconda的安装和使用（超详细图文）
+icon: devicon:anaconda
 head:
-  - [meta, { name: keywords, content: 方括号语法 }]
-  - [meta, { name: description, content: descriptionsdfcadf发 }]
+  - [meta, { name: keywords, content: python anaconda }]
+  - [meta, { name: description, content: Python使用Selenium的详细步骤 }]
+category:
+  - Python
 tags:
   - python
   - anaconda
 date: 2024-11-24
 permalink: /blog/python/how-anaconda.html
-excerpt: sdfegseg
-article: false
+excerpt: Anaconda的安装和使用
 ---
 
 `这个是摘要`

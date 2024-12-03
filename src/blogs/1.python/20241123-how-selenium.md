@@ -1,15 +1,17 @@
 ---
 title: Python使用Selenium详细步骤
-icon: skill-icons:selenium
+icon: devicon:selenium
+head:
+  - [meta, { name: keywords, content: python selenium }]
+  - [meta, { name: description, content: Python使用Selenium的详细步骤 }]
 category:
-  - 编程语言
   - Python
 tags:
   - python
   - selenium
-createTime: 2024/10/21 14:42:33
+date: 2024-10-21
 permalink: /blog/python/how-selenium.html
-excerpt: 这里的内容会被作为摘要
+excerpt: 1.Selenium介绍<br>2.Selenium环境搭建
 ---
 
 ## Selenium介绍
@@ -76,7 +78,8 @@ Google官网：[https://googlechromelabs.github.io/chrome-for-testing/#stable](h
 
 无界面浏览器，它会把网站加载到内存并执行页面上的 JavaScript，因为不会展示图形界面，所以运行起来比完整的浏览器要高效，它一般是用在像linux线上服务器，不过现在 chrome（v65以上） 也支持无头浏览器了。
 
-==注意==：下载安装步骤如下:需要下对应浏览器版本的驱动
+**下载安装步骤如下：需要下对应浏览器版本的驱动**
+
 查看 chrome的版本是最新版本123，所以下载对应的驱动
 
 

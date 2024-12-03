@@ -1,6 +1,6 @@
 ---
 title: 第一个Python程序
-createTime: 2024/10/19 21:21:07
+date: 2024-10-19
 permalink: /notes/python/first-coding.html
 article: false
 ---
