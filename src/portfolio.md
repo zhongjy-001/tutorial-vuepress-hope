@@ -1,10 +1,10 @@
 ---
 home: true
-portfolio: true
+# portfolio: true
 title: 档案主页
 icon: home
 welcome: 👋 你好，我是
-name: 江户川柯南
+name: 小钟同学
 avatar: https://theme-hope-assets.vuejs.press/hero/conan.png
 
 titles:

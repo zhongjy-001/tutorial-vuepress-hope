@@ -1,16 +1,3 @@
 import comp from "D:/Codes/tutorial-vuepress-hope/src/.vuepress/.temp/pages/demo/encrypt.html.vue"
-const data = JSON.parse("{\"path\":\"/demo/encrypt.html\",\"title\":\"密码加密的文章\",\"lang\":\"zh-CN\",\"frontmatter\":{\"icon\":\"lock\",\"category\":[\"使用指南\"],\"tag\":[\"加密\"],\"article\":false,\"feed\":false,\"seo\":false,\"gitInclude\":[],\"head\":[]},\"headers\":[],\"readingTime\":{\"minutes\":0.52,\"words\":156},\"filePathRelative\":\"demo/encrypt.md\"}")
+const data = JSON.parse("{\"path\":\"/demo/encrypt.html\",\"title\":\"密码加密的文章\",\"lang\":\"zh-CN\",\"frontmatter\":{\"icon\":\"lock\",\"category\":[\"使用指南\"],\"tag\":[\"加密\"],\"article\":false,\"feed\":false,\"seo\":false,\"head\":[]},\"headers\":[],\"git\":{\"createdTime\":1732717023000,\"updatedTime\":1733151529000,\"contributors\":[{\"name\":\"zhongjy-001\",\"email\":\"zhongjy_001@163.com\",\"commits\":2}]},\"readingTime\":{\"minutes\":0.52,\"words\":156},\"filePathRelative\":\"demo/encrypt.md\",\"localizedDate\":\"2024年11月27日\"}")
 export { comp, data }
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
-}

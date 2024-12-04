@@ -40,6 +40,7 @@ var pythonNodes = arraySidebar([
 ])
 
 export default sidebar({
+  // "/category": null
   // "/notes/csharp/": csharpNodes,
   // "/notes/python/": pythonNodes,
 });

@@ -3,7 +3,7 @@ title: Markdown
 tags:
   - markdown
 date: 2024-10-21
-permalink: /blog/markdown.html
+permalink: /blog/other/markdown.html
 article: false
 ---
 
