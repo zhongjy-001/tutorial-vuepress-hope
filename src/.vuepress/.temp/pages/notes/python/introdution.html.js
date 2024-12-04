@@ -1,16 +1,3 @@
 import comp from "D:/Codes/tutorial-vuepress-hope/src/.vuepress/.temp/pages/notes/python/introdution.html.vue"
-const data = JSON.parse("{\"path\":\"/notes/python/introdution.html\",\"title\":\"简介\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"简介\",\"date\":\"2024-10-19T00:00:00.000Z\",\"permalink\":\"/notes/python/introdution.html\",\"article\":false,\"gitInclude\":[],\"head\":[[\"meta\",{\"property\":\"og:url\",\"content\":\"https://www.igoblogs.com/notes/python/introdution.html\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"一起来编程\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"简介\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2024-10-19T00:00:00.000Z\"}],[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"WebPage\\\",\\\"name\\\":\\\"简介\\\"}\"]]},\"headers\":[],\"readingTime\":{\"minutes\":0.04,\"words\":11},\"filePathRelative\":\"notes/python/introdution.md\",\"localizedDate\":\"2024年10月19日\",\"excerpt\":\"\"}")
+const data = JSON.parse("{\"path\":\"/notes/python/introdution.html\",\"title\":\"简介\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"简介\",\"date\":\"2024-10-19T00:00:00.000Z\",\"permalink\":\"/notes/python/introdution.html\",\"article\":false,\"head\":[[\"meta\",{\"property\":\"og:url\",\"content\":\"https://www.igoblogs.com/notes/python/introdution.html\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"一起来编程\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"简介\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"property\":\"og:updated_time\",\"content\":\"2024-12-03T17:21:17.000Z\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2024-10-19T00:00:00.000Z\"}],[\"meta\",{\"property\":\"article:modified_time\",\"content\":\"2024-12-03T17:21:17.000Z\"}],[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"WebPage\\\",\\\"name\\\":\\\"简介\\\"}\"]]},\"headers\":[],\"git\":{\"createdTime\":1732874731000,\"updatedTime\":1733246477000,\"contributors\":[{\"name\":\"zhongjy-001\",\"email\":\"zhongjy_001@163.com\",\"commits\":3}]},\"readingTime\":{\"minutes\":0.04,\"words\":11},\"filePathRelative\":\"notes/python/introdution.md\",\"localizedDate\":\"2024年10月19日\",\"excerpt\":\"\"}")
 export { comp, data }
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
-}

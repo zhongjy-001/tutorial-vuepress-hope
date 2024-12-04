@@ -15,6 +15,7 @@ import * as clientConfig13 from 'D:/Codes/tutorial-vuepress-hope/src/.vuepress/.
 import * as clientConfig14 from 'D:/Codes/tutorial-vuepress-hope/node_modules/.pnpm/@vuepress+plugin-photo-swipe@2.0.0-rc.56_vuepress@2.0.0-rc.18_@vuepress+bundler-vite@2.0.0-rc_skn35ofapwym2noq5pmnzyvt4e/node_modules/@vuepress/plugin-photo-swipe/lib/client/config.js'
 import * as clientConfig15 from 'D:/Codes/tutorial-vuepress-hope/node_modules/.pnpm/@vuepress+plugin-redirect@2.0.0-rc.56_vuepress@2.0.0-rc.18_@vuepress+bundler-vite@2.0.0-rc.18_e3zimhwicdnp2kfqt5lnkbebrq/node_modules/@vuepress/plugin-redirect/lib/client/config.js'
 import * as clientConfig16 from 'D:/Codes/tutorial-vuepress-hope/src/.vuepress/.temp/theme-hope/config.js'
+import * as clientConfig17 from 'D:/Codes/tutorial-vuepress-hope/node_modules/.pnpm/@vuepress+plugin-baidu-analytics@2.0.0-rc.61_vuepress@2.0.0-rc.18_@vuepress+bundler-vite@2.0._eaxwzy22a7rxsepxjq32q4ebfi/node_modules/@vuepress/plugin-baidu-analytics/lib/client/config.js'
 
 export const clientConfigs = [
   clientConfig0,
@@ -34,4 +35,5 @@ export const clientConfigs = [
   clientConfig14,
   clientConfig15,
   clientConfig16,
+  clientConfig17,
 ].map((m) => m.default).filter(Boolean)

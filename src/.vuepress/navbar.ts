@@ -23,11 +23,11 @@ export default navbar([
   //   prefix: "python/",
   //   link: "/notes/python/",
   // },
-  {
-    text: "博主介绍",
-    icon: "icon-park:user",
-    link: "portfolio.md",
-  },
+  // {
+  //   text: "博主介绍",
+  //   icon: "icon-park:user",
+  //   link: "portfolio.md",
+  // },
   // {
   //   text: "指南",
   //   icon: "lightbulb",
