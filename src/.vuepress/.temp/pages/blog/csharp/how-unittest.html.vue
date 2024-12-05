@@ -317,6 +317,47 @@
 </tr>
 </tbody>
 </table>
+<ol start="12">
+<li>CollectionAssert静态类的断言方法</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CollectionAssert.AllItemsAreNotNull</td>
+<td style="text-align:left">断言集合里的元素全部不是Null,也即集合不包含null元素,这个方法只有一个参数,传入我们要判断的集合即可</td>
+</tr>
+<tr>
+<td style="text-align:left">CollectionAssert.AllItemsAreUnique</td>
+<td style="text-align:left">断言集合里面的元素全部是惟一的,即集合里没有重复元素</td>
+</tr>
+<tr>
+<td style="text-align:left">CollectionAssert.AreEqual</td>
+<td style="text-align:left">用于断言两个集合是否相等</td>
+</tr>
+<tr>
+<td style="text-align:left">CollectionAssert.AreEquivalent</td>
+<td style="text-align:left">用来判断两个集合的元素是否等价,如果两个集合元素类型相同,个数也相同,即视为等价,与上面的AreEqual方法相比,它不关心顺序</td>
+</tr>
+<tr>
+<td style="text-align:left">CollectionAssert.Contains</td>
+<td style="text-align:left">断言集合是否包含某一元素</td>
+</tr>
+<tr>
+<td style="text-align:left">CollectionAssert.IsEmpty</td>
+<td style="text-align:left">断言某一集合是空集合,即元素个数为0</td>
+</tr>
+<tr>
+<td style="text-align:left">CollectionAssert.IsSubsetOf</td>
+<td style="text-align:left">判断一个集合是否为另一个集合的子集,这两个集合不必是同一类集合(可以一个是array,一个是list),只要一个集合的元素完全包含在另一个集合中,即认为它是另一个集合的子集</td>
+</tr>
+</tbody>
+</table>
 </div></template>
 
 

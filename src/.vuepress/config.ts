@@ -7,19 +7,19 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "一起来编程",
+  title: "一起编程吧",
   description: "vuepress-theme-hope 的文档演示",
 
   theme,
 
-  // head: [
-  //   [
-  //     'script', {
-  //       type:'text/javascript',
-  //       src:'https://hm.baidu.com/hm.js?09d805ec501edb0c0cad2050e70fb9bb'
-  //     }, 
-  //   ]
-  // ],
+  head: [
+    ['link', { rel: 'icon', type: 'image/x-icon', href: '/images/logo.png' }],
+    // ['script',
+    // {
+    //   type:'text/javascript',
+    //   src:'https://hm.baidu.com/hm.js?09d805ec501edb0c0cad2050e70fb9bb'
+    // }],
+  ],
 
   plugins: [
     baiduAnalyticsPlugin({id: '09d805ec501edb0c0cad2050e70fb9bb'}),

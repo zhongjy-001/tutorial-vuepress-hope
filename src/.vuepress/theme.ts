@@ -16,7 +16,7 @@ export default hopeTheme({
 
   favicon: '',
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "/images/logo.png",
 
   // 默认为 GitHub. 同时也可以是一个完整的 URL
   repo: "zhongjy-001/tutorial-vuepress-hope",

@@ -1,1 +1,1 @@
-export const store = ["/blog/python/how-selenium.html","/blog/csharp/how-unittest.html"];
+export const store = ["/blog/csharp/how-unittest.html","/blog/python/how-selenium.html"];
