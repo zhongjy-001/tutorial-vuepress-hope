@@ -1,2 +1,0 @@
-export const categoriesMap = {"category":{"/":{"path":"/category/","map":{"C#":{"path":"/category/c_/","indexes":[0]},"Python":{"path":"/category/python/","indexes":[1]}}}},"tag":{"/":{"path":"/tag/","map":{"c#":{"path":"/tag/c_/","indexes":[0]},"单元测试":{"path":"/tag/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/","indexes":[0]},"python":{"path":"/tag/python/","indexes":[1]},"selenium":{"path":"/tag/selenium/","indexes":[1]}}}}};
-
