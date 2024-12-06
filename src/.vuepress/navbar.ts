@@ -3,12 +3,12 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   {
     text: "首页",
-    icon: "logos:google-home",
+    icon: "ion:home",
     link: "/",
   },
   {
     text: "博客列表",
-    icon: "logos:blogger",
+    icon: "fa-solid:blog",
     link: "/blogs/",
   },
   // {
@@ -23,11 +23,11 @@ export default navbar([
   //   prefix: "python/",
   //   link: "/notes/python/",
   // },
-  // {
-  //   text: "博主介绍",
-  //   icon: "icon-park:user",
-  //   link: "portfolio.md",
-  // },
+  {
+    text: "博主介绍",
+    icon: "si:user-fill",
+    link: "portfolio.md",
+  },
   // {
   //   text: "指南",
   //   icon: "lightbulb",

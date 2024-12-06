@@ -16,7 +16,7 @@ export default hopeTheme({
 
   favicon: '',
 
-  logo: "/images/logo.png",
+  logo: "/assets/logo.png",
 
   // 默认为 GitHub. 同时也可以是一个完整的 URL
   repo: "zhongjy-001/tutorial-vuepress-hope",
@@ -43,7 +43,7 @@ export default hopeTheme({
   fullscreen: false,
 
   // 页脚
-  copyright: "MIT 协议 | 版权所有 © 2019-至今 | 一起来编程",
+  copyright: "MIT 协议 | 版权所有 © 2019-至今 | 一起编程吧",
   footer: `使用 <a href="https://theme-hope.vuejs.press/zh/" target="_blank">VuePress Theme Hope</a> 主题 | 备案号：<a href="https://beian.miit.gov.cn/" target="_blank">渝ICP备2024044330号-1</a>`,
   displayFooter: true,
 

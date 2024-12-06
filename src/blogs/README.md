@@ -1,6 +1,6 @@
 ---
 title: 博客
-icon: logos:blogger
+icon: fa-solid:blog
 index: false
 permalink: /blog/
 dir:

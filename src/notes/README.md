@@ -1,6 +1,6 @@
 ---
 title: 系列教程
-icon: logos:blogger
+icon: fa-solid:blog
 index: false
 breadcrumbExclude: true
 permalink: /notes/

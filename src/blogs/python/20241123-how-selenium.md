@@ -11,7 +11,7 @@ tags:
   - selenium
 date: 2024-10-21
 permalink: /blog/python/how-selenium.html
-excerpt: <small>1.Selenium介绍<br>2.Selenium环境搭建</small>
+excerpt: <small>Selenium 提供了一个强大的接口来控制浏览器，实现自动化测试和网页操作。</small>
 ---
 
 ## Selenium介绍
@@ -52,9 +52,9 @@ pip install selenium -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
 安装成功以后，会出现如下界面
 
-![开始安装Selenium](/images/python/selenium/01-install-start.png "开始安装Selenium")
+![开始安装Selenium](/assets/python/selenium/01-install-start.png "开始安装Selenium")
 
-![安装完成Selenium](/images/python/selenium/01-install-finish.png "安装完成Selenium")
+![安装完成Selenium](/assets/python/selenium/01-install-finish.png "安装完成Selenium")
 
 ## 安装驱动WebDriver ##
 
