@@ -1,6 +1,6 @@
 ---
 title: Python博客
-icon: logos:python
+icon: codicon:python
 permalink: /blog/python/
 article: false
 ---

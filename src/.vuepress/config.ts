@@ -13,7 +13,7 @@ export default defineUserConfig({
   theme,
 
   head: [
-    // ['link', { rel: 'icon', type: 'image/x-icon', href: '/assets/logo.png' }],
+    // ['link', { rel: 'icon', type: 'image/x-icon', href: '/logo.png' }],
     // ['script',
     // {
     //   type:'text/javascript',

@@ -13,18 +13,18 @@ export default navbar([
   },
   // {
   //   text: "C#教程",
-  //   icon: "devicon:csharp",
+  //   icon: "devicon-plain:csharp",
   //   prefix: "csharp/",
   //   link: "/notes/csharp/",
   // },
   // {
   //   text: "Python教程",
-  //   icon: "logos:python",
+  //   icon: "codicon:python",
   //   prefix: "python/",
   //   link: "/notes/python/",
   // },
   {
-    text: "博主介绍",
+    text: "博主档案",
     icon: "si:user-fill",
     link: "portfolio.md",
   },

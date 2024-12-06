@@ -1,6 +1,6 @@
 ---
 title: Pyton中文教程
-icon: logos:python
+icon: codicon:python
 permalink: /notes/python/
 article: false
 ---

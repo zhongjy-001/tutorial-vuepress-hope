@@ -1,24 +1,27 @@
 ---
+containerClass: home
 home: true
-# portfolio: true
-title: 档案主页
-icon: home
-welcome: 👋 你好，我是
-name: 小钟同学
-avatar: https://theme-hope-assets.vuejs.press/hero/conan.png
+title: 博主档案
+heroText: 你好，很高兴遇见你 ~ ~
+heroImage: /assets/image/my-head.svg
+# bgImage: /assets/bg/1-light.svg
+# bgImageDark: /assets/bg/1-dark.svg
+tagline: 我是小钟同学
+actions:
+  - text: 我的博客
+    icon: fa-solid:blog
+    link: ./blogs/
+    type: primary
+# highlights:
+#   - description: 水电费
+#     highlights:
+#       - title: 深色模式
+#         icon: circle-half-stroke
+#         details: 可以自由切换浅色模式与深色模式
 
-titles:
-  - 天才少年侦探
-  - 小兰的青梅竹马
-  - 黑衣组织的最大对手
+#       - title: 主题色切换
+#         icon: palette
+#         details: 支持自定义主题色并允许用户在预设的主题颜色之间切换
 
-footer: false
+
 ---
-
-## 介绍
-
-这是一个档案主页的案例。
-
-要使用此布局，你应该在页面 Frontmatter 中设置 `home: true` 和 `portfolio: true`。
-
-相关配置文档请见 [档案主页](https://theme-hope.vuejs.press/zh/guide/blog/home.html#档案类型主页)。

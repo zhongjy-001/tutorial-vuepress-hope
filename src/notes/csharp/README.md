@@ -1,6 +1,6 @@
 ---
 title: C#中文教程
-icon: devicon:csharp
+icon: devicon-plain:csharp
 index: false
 permalink: /notes/csharp/
 article: false

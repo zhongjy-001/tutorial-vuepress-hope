@@ -1,7 +1,8 @@
 ---
+containerClass: home
 home: true
-icon: ion:home
 title: 首页
+icon: ion:home
 heroImage: /vuepress_logo.svg
 bgImage: /assets/bg/6-light.svg
 bgImageDark: /assets/bg/6-dark.svg

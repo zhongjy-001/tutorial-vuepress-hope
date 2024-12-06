@@ -1,6 +1,6 @@
 ---
 title: Python使用Selenium详细步骤
-icon: devicon:selenium
+icon: simple-icons:selenium
 head:
   - [meta, { name: keywords, content: python selenium }]
   - [meta, { name: description, content: Python使用Selenium的详细步骤 }]
@@ -11,7 +11,7 @@ tags:
   - selenium
 date: 2024-10-21
 permalink: /blog/python/how-selenium.html
-excerpt: <small>Selenium 提供了一个强大的接口来控制浏览器，实现自动化测试和网页操作。</small>
+excerpt: <small>Selenium 是一个强大的工具，可以用于自动化网页测试和网页操作。它支持多种浏览器，并且允许我们通过 Python 来控制这些浏览器进行操作。本教程将详细介绍如何在 Python 中安装、配置和使用 Selenium。</small>
 ---
 
 ## Selenium介绍

@@ -11,7 +11,7 @@ tags:
   - 单元测试
 date: 2024-10-29
 permalink: /blog/csharp/how-unittest.html
-excerpt: 这里的内容会被作为摘要
+excerpt: <small>单元测试（unit testing）是一段自动化的代码，用来调用被测试的方法或类，而后验证基于该方法或类的逻辑行为的一些假设。</small>
 ---
 
 > 用 VS2022 中自带的测试模块（MSTest）写一个简单的单元测试
