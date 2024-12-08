@@ -8,7 +8,7 @@ export default hopeTheme({
 
   author: {
     name: "小钟同学",
-    url: "https://mister-hope.com",
+    url: "/portfolio.html",
   },
 
   // "iconify"、"fontawesome" 和 "fontawesome-with-brand"
