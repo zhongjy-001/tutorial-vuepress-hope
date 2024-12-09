@@ -8,7 +8,7 @@ export default defineUserConfig({
 
   lang: "zh-CN",
   title: "一起编程吧",
-  description: "vuepress-theme-hope 的文档演示",
+  description: "博主的编程日志、及多年编程过程中总结出来的系列中文教程",
 
   theme,
 
