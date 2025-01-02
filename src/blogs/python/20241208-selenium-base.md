@@ -2,13 +2,13 @@
 title: Python使用Selenium参考指南（一）
 icon: simple-icons:selenium
 head:
-  - [meta, { name: keywords, content: python selenium 基础 }]
+  - [meta, { name: keywords, content: Python Selenium 基础 }]
   - [meta, { name: description, content: Python之Selenium基础参考指南 }]
 category:
   - Python
 tags:
   - python
-  - selenium
+  - Selenium
   - 基础
 date: 2024-12-08
 permalink: /blog/python/selenium-base.html

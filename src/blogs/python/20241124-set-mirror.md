@@ -1,8 +1,8 @@
 ---
 title: Python怎么设置国内镜像源
 head:
-  - [meta, { name: keywords, content: python anaconda }]
-  - [meta, { name: description, content: Python使用Selenium的详细步骤 }]
+  - [meta, { name: keywords, content: Python 镜像源 }]
+  - [meta, { name: description, content: Python怎么设置国内镜像源 }]
 category:
   - Python
 tags:
