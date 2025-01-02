@@ -1,15 +1,15 @@
 ---
-title: 使用C#如何写单元测试
+title: 用Python如何写单元测试
 head:
-  - [meta, { name: keywords, content: C# 单元测试 }]
+  - [meta, { name: keywords, content: Python 单元测试 }]
   - [meta, { name: description, content: 单元测试（unit testing）是一段自动化的代码，用来调用被测试的方法或类，而后验证基于该方法或类的逻辑行为的一些假设。 }]
 category:
-  - C#
+  - Python
 tags:
-  - C#
+  - Python
   - 单元测试
-date: 2024-10-29
-permalink: /blog/csharp/how-unittest.html
+date: 2024-12-11
+permalink: /blog/python/how-unittest.html
 excerpt: <small>单元测试（unit testing）是一段自动化的代码，用来调用被测试的方法或类，而后验证基于该方法或类的逻辑行为的一些假设。</small>
 ---
 

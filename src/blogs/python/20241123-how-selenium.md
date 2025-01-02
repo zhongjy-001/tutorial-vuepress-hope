@@ -2,13 +2,13 @@
 title: Python使用Selenium详细步骤
 icon: simple-icons:selenium
 head:
-  - [meta, { name: keywords, content: python selenium }]
-  - [meta, { name: description, content: Python使用Selenium的详细步骤 }]
+  - [meta, { name: keywords, content: Python Selenium }]
+  - [meta, { name: description, content: Selenium 是一个强大的工具，可以用于自动化网页测试和网页操作。它支持多种浏览器，并且允许我们通过 Python 来控制这些浏览器进行操作。本教程将详细介绍如何在 Python 中安装、配置和使用 Selenium。 }]
 category:
   - Python
 tags:
-  - python
-  - selenium
+  - Python
+  - Selenium
 date: 2024-10-21
 permalink: /blog/python/how-selenium.html
 excerpt: <small>Selenium 是一个强大的工具，可以用于自动化网页测试和网页操作。它支持多种浏览器，并且允许我们通过 Python 来控制这些浏览器进行操作。本教程将详细介绍如何在 Python 中安装、配置和使用 Selenium。</small>
@@ -29,7 +29,7 @@ Python 提供了多种模拟器运行库，Selenium、Splash、Pyppetter、Playw
 
 > 我本机是 windows 11，浏览器使用 Edge 来进行测试
 >
-> Python建议使用[环境管理Anaconda](20241124-how-anaconda.md)，当前使用的Python3.8
+> Python建议使用[环境管理Anaconda](20241215-anaconda3-use.md)，当前使用的Python3.8
 
 ::: code-tabs
 @tab Python
@@ -207,4 +207,4 @@ finally:
 
 ## 结束
 
-Selenium 提供了一个强大的接口来控制浏览器，实现自动化测试和网页操作。通过以上教程，你可以快速入门并开始创建自己的自动化脚本。查阅指南文档以了解更多高级用法和功能
+Selenium 提供了一个强大的接口来控制浏览器，实现自动化测试和网页操作。通过以上教程，你可以快速入门并开始创建自己的自动化脚本。查阅[基础参考指南](20241208-selenium-base.md)以了解更多基础用法和功能，[进阶操作教程](20241210-selenium-advance.md)以了解高级用法和功能
