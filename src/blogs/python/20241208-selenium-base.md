@@ -7,7 +7,7 @@ head:
 category:
   - Python
 tags:
-  - python
+  - Python
   - Selenium
   - 基础
 date: 2024-12-08

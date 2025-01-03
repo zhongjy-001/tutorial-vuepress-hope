@@ -1,7 +1,7 @@
 ---
 title: 测试页面
-date: 2024-12-27
 permalink: /blog/test-all.html
+article: false
 ---
 
 ## 1. Selenium测试界面

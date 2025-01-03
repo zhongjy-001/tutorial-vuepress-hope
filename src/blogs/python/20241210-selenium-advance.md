@@ -7,7 +7,7 @@ head:
 category:
   - Python
 tags:
-  - python
+  - Python
   - Selenium
   - 进阶
 date: 2024-12-10
