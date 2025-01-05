@@ -10,7 +10,7 @@ tags:
   - 镜像源
 date: 2024-11-24
 permalink: /blog/python/set-mirror.html
-excerpt: Anaconda的安装和使用
+excerpt: <small>Anaconda的安装和使用</small>
 ---
 
 一、国内镜像源 

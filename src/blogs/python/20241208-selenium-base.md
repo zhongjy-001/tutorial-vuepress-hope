@@ -12,7 +12,7 @@ tags:
   - 基础
 date: 2024-12-08
 permalink: /blog/python/selenium-base.html
-excerpt: 1.Selenium介绍<br>2.Selenium环境搭建
+excerpt: <small>Python使用Selenium参考指南</small>
 ---
 
 ## 完整代码
