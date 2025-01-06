@@ -13,4 +13,5 @@ tags:
 date: 2024-12-10
 permalink: /blog/python/selenium-advance.html
 excerpt: <small>Python之Selenium进阶操作教程</small>
+article: false
 ---

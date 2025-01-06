@@ -11,4 +11,5 @@ tags:
 date: 2024-12-15
 permalink: /blog/python/anaconda3-use.html
 excerpt: <small>Anaconda3</small>
+article: false
 ---

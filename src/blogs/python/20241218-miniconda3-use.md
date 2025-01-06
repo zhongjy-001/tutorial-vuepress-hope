@@ -11,4 +11,5 @@ tags:
 date: 2024-12-15
 permalink: /blog/python/miniconda3-use.html
 excerpt: <small>Miniconda3</small>
+article: false
 ---
