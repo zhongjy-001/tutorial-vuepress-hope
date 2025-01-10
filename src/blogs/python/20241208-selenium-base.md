@@ -24,32 +24,42 @@ import time
 
 def test_selenium_base(browser: webdriver.Edge):
     try:
-        # 发送请求访问百度
-        browser.get("http://localhost:8080/blog/test-all.html")
+        # 发送请求访问测试页面
+        browser.get("https://www.igoblogs.com/blog/test-all.html")
         print("当前窗口标题:", browser.title)
-        print("当前窗口地址:", browser.current_url)
+        print("当前窗口Url:", browser.current_url)
         ele = browser.find_element(by=By.ID, value="txtname")  # 根据元素ID查找搜索框
+        ele.clear()
+        # 提交到百度搜索关键词
         ele.send_keys("小钟同学")  # 在搜索框中输入“小钟同学”
         ele.submit()  # 提交
         browser.implicitly_wait(5)  # 智能等待，等待页面加载完成
-        # 第二个链接的XPath
+        # 切换到第二个窗口
+        browser.switch_to.window(browser.window_handles[-1])
+        print("第二个窗口标题:", browser.title)
+        print("第二个窗口Url:", browser.current_url)
+        # 新链接的XPath
         xpath = '//div[@tpl="se_com_default"][2]//h3[@class="c-title t t tts-title"]/a'
         ele = browser.find_element(by=By.XPATH, value=xpath)  # 根据元素XPath查找搜索框
         ele.click()  # 点击链接
         time.sleep(2)  # 等待2秒后继续
-        handles = browser.window_handles
-        # 切换到新标签页
-        browser.switch_to.window(handles[len(handles) - 1])
-        print("第二个标签页的Url:", browser.current_url)
-        print("第二个标签页的标题:", browser.title)
+        # 切换到第三个窗口
+        browser.switch_to.window(browser.window_handles[-1])
+        print("第三个窗口的标题:", browser.title)
+        print("第三个窗口的Url:", browser.current_url)
+        # 保存第三个窗口的截屏快照
+        print("截屏快照:", R"D:\screenshot.png")
+        browser.save_screenshot(R"D:\screenshot.png")
         # 关闭当前标签页
         browser.close()
-        # 切换回原页面
-        browser.switch_to.window(handles[0])
-        print("原页面的Url:", browser.current_url)
-        print("原页面的标题:", browser.title)
+        # 切换回第一个窗口
+        browser.switch_to.window(browser.window_handles[0])
+        print("第一个窗口的标题:", browser.title)
+        print("第一个窗口的Url:", browser.current_url)
         # 等待10秒后继续
         time.sleep(10)
+    except Exception as e:
+        print("[错误]", e)
     finally:
         # 退出浏览器
         browser.quit()
@@ -80,201 +90,448 @@ test_selenium_base(browser=browser)
 ||`close()`|关闭当前标签页，不关闭浏览器|
 ||`quit()`|关闭浏览器，释放进程|
 
-代码展示：
+## 单个/多个元素定位
 
-```py
-def test_attr_method(self):
-    """
-    @todo: 测试浏览器的属性和方法
-    @return:
-    """
-    # 实例化浏览器对象
-    driver = webdriver.Chrome(service=self.service)
+**测试页面地址**
 
-    # 获取浏览器的名称
-    print(driver.name)
+<a href='https://www.igoblogs.com/blog/test-all.html' target='_blank'>https://www.igoblogs.com/blog/test-all.html</a>
 
-    # 访问百度首页，这里先暂时不使用https
-    driver.get('http://www.baidu.com')
-    # 属性1：打印当前响应对应的URL,之前 http的转换成了 https
-    print(driver.current_url)
-    # 属性2：打印当前标签页的标题
-    print(driver.title)
-    # 属性3：打印当前网页的源码长度
-    print(len(driver.page_source))
+**取数据单个和多个的区别**
 
-    # 休息2秒，跳转到豆瓣首页,这里的两秒是等当前页面加载完毕，也就是浏览器转完圈后等待的两秒
-    time.sleep(2)
-    driver.get('https://www.douban.com')
+- browser.find_element：定位的是元素的对象，**定位不到报错**
 
-    # 休息2秒，再返回百度
-    time.sleep(2)
-    driver.back()
-
-    # 休息2秒，再前进到豆瓣
-    time.sleep(2)
-    driver.forward()
-
-    # 休息2秒，再刷新页面
-    time.sleep(2)
-    driver.refresh()
-
-    # 保存当前页面的截屏快照
-    driver.save_screenshot("./screenshot.png")
-
-    # 关闭当前标签页
-    driver.close()
-
-    # 关闭浏览器,释放进程
-    driver.quit()
-    pass
-```
-
-## 单个元素定位
+- browser.find_elements：定位的是列表，列表里面存元素对象，如果定位不到则是空的数据
 
 ### 1. 通过 `By.ID` 定位
 
-语法格式：`find_element(by=By.ID, value='标签的id属性名)`
-
-测试代码
+实例代码片段
 
 ```py
-def test_element_id(self):
+def test_find_element_id(browser: webdriver.Edge):
     """
-    @todo: 通过id定位元素，测试输入框的输入和点击
-    @return:
+    通过 ID 定位元素
+
+    参数:
+        browser (webdriver.Edge): Edge浏览器, 已打开测试页面
+
+    返回值:
+        无
     """
-    # 实例化浏览器对象
-    browser = webdriver.Chrome(service=self.service)
-    # 打开百度首页
-    browser.get('https://www.baidu.com')
-    # 输入关键字内容sora,并赋值给 标签的id属性名来定位；这是新的写法,
-    browser.find_element(by=By.ID, value='kw').send_keys('sora')
-    # 点击搜索按钮
-    browser.find_element(by=By.ID, value='su').click()
-    # 获取搜索结果
-    # 关闭浏览器
-    time.sleep(5)
-    browser.quit()
-    pass
+    # 查找标签的 ID 属性='lblname'的元素列表
+    lblnames = browser.find_elements(by=By.ID, value="lblname")
+    print("查找到 ID='lblname' 元素的数量:", len(lblnames))
+    # 注：find_element方法在没找到对象时会出NoSuchElementException异常
+    lblname = browser.find_element(by=By.ID, value="lblname")
+    for lblname in lblnames:
+        print("[index]", lblnames.index(lblname))
+        print("[tag_name]", lblname.tag_name)
+        print("[class]", lblname.get_attribute("class"))
+        print("[value]", lblname.get_attribute("value"))
+        print("[text]", lblname.text)
+    print()
+    # 等待2秒后继续
+    time.sleep(2)
+
+test_find_element_id(browser=browser)
+
+```
+
+代码输出
+
+```shell:no-line-numbers
+查找到 ID='lblname' 元素的数量: 1
+[index] 0
+[tag_name] div
+[class] demo-label
+[value] None
+[text] 我的id=lblname
 
 ```
 
 ### 2. 通过 `By.CLASS_NAME` 定位
 
-即元素的class定位一个元素。语法格式：`find_element(by=By.CLASS_NAME, value='标签的class属性名')`
+即元素的class定位一个元素。
 
-测试代码：
+实例代码片段
 
 ```py
-def test_element_class_name(self):
+def test_find_element_class_name(browser: webdriver.Edge):
     """
-    @todo: 通过class_name定位元素，测试输入框的输入和点击
-    @return:
+    通过 CLASS_NAME 定位元素
+
+    参数:
+        browser (webdriver.Edge): Edge浏览器, 已打开测试页面
+
+    返回值:
+        无
     """
-    browser = webdriver.Chrome(service=self.service)
-    browser.get('https://www.baidu.com')
-    # 使用class_name定位输入框,并把输入框的内容设置为sora
-    browser.find_element(by=By.CLASS_NAME, value='s_ipt').send_keys('sora')
-    browser.find_element(by=By.CLASS_NAME, value='s_btn').click()
+    # 查找标签的 CLASS_NAME 属性='demo-label'的元素列表
+    labels = browser.find_elements(by=By.CLASS_NAME, value="demo-label")
+    print("查找到 CLASS_NAME='lblname' 元素的数量:", len(labels))
+    # 注：find_element方法在没找到对象时会出NoSuchElementException异常
+    label = browser.find_element(by=By.CLASS_NAME, value="demo-label")
+    for label in labels:
+        print("[index]", labels.index(label))
+        print("[tag_name]", label.tag_name)
+        print("[class]", label.get_attribute("class"))
+        print("[value]", label.get_attribute("value"))
+        print("[text]", label.text)
+    print()
+    # 等待2秒后继续
     time.sleep(2)
-    browser.quit()
-    pass
+
+test_find_element_class_name(browser=browser)
+
+```
+
+代码输出
+
+```shell:no-line-numbers
+查找到 CLASS_NAME='lblname' 元素的数量: 3
+[index] 0
+[tag_name] div
+[class] demo-label
+[value] None
+[text] 我的id=lblname
+[index] 1
+[tag_name] div
+[class] demo-label
+[value] None
+[text] 我的id=''
+[index] 2
+[tag_name] div
+[class] demo-label
+[value] None
+[text] 链接提交链接A录入链接B保存链接C
 
 ```
 
 ### 3. 通过 `By.XPATH` 定位
 
-语法格式：`find_element(by=By.XPATH, value='xpath的表达式')`
+即元素的XPATH定位一个元素，参见 [XPATH使用方法](./../html/20250109-all-xpath.md)。
 
-测试代码
-
-```py
-def test_element_xpath(self):
-    """
-    @todo: 通过xpath定位元素，测试输入框的输入和点击
-    @return:
-    """
-    # 实例化浏览器对象
-    browser = webdriver.Chrome(service=self.service)
-    browser.get('https://www.baidu.com')
-    # 使用xpath定位输入框,并把输入框的内容设置为sora
-    browser.find_element(by=By.XPATH, value='//*[@id="kw"]').send_keys('sora')
-    # 点击搜索按钮
-    browser.find_element(by=By.XPATH, value='//*[@id="su"]').click()
-    # 关闭浏览器
-    time.sleep(5)
-    browser.quit()
-    pass
-
-```
-
-### 4. 通过 `By.CSS_SELECTOR` 定位
-
-即选择器，语法格式：`browser.find_element(by=By.CSS_SELECTOR, value="选择器表达式")`
-
-测试代码：
+实例代码片段
 
 ```py
-def test_element_css_selector(self):
+def test_find_element_xpath(browser: webdriver.Edge):
     """
-    @todo: 通过css选择器定位元素，测试输入框的输入和点击
-    @return:
+    通过 XPATH 定位元素
+
+    参数:
+        browser (webdriver.Edge): Edge浏览器, 已打开测试页面
+
+    返回值:
+        无
     """
-    # 实例化浏览器对象,打开百度首页
-    browser = webdriver.Chrome(service=self.service)
-    browser.get('https://www.baidu.com')
-    # 使用css选择器定位输入框,先进行清空文本框，并把输入框的内容设置为sora
-    browser.find_element(by=By.CSS_SELECTOR, value="#kw").clear()
-    browser.find_element(by=By.CSS_SELECTOR, value="#kw").send_keys('sora')
-    browser.find_element(by=By.CSS_SELECTOR, value="#su").click()
-    # 关闭浏览器
+    # 查找标签的 XPATH 属性="//input[@id='txtsearch']"的元素列表
+    txtsearchs = browser.find_elements(by=By.XPATH, value="//input[@id='txtsearch']")
+    print("查找到 XPATH=\"//input[@id='txtsearch']\" 元素的数量:", len(txtsearchs))
+    # 注：find_element方法在没找到对象时会出NoSuchElementException异常
+    txtsearch = browser.find_element(by=By.XPATH, value="//input[@id='txtsearch']")
+    for txtsearch in txtsearchs:
+        print("[index]", txtsearchs.index(txtsearch))
+        print("[tag_name]", txtsearch.tag_name)
+        print("[class]", txtsearch.get_attribute("class"))
+        print("[value]", txtsearch.get_attribute("value"))
+        print("[text]", txtsearch.text)
+    print()
+    # 等待2秒后继续
     time.sleep(2)
-    browser.quit()
-    pass
+
+test_find_element_xpath(browser=browser)
 
 ```
 
-## 多个元素定位
+代码输出
 
-天天基金网为例子，如下图：
+```shell:no-line-numbers
+查找到 XPATH="//input[@id='txtsearch']" 元素的数量: 1
+[index] 0
+[tag_name] input
+[class] demo-search
+[value] 小钟同学
+[text]
+```
 
+### 4. 通过 `By.LINK_TEXT` 定位
 
-通过xpath定位排行榜的基金代码
-语法格式：
-格式上和单个获取的差不多，唯一有差别的是方法后面多了一个s，使用了find_elements
-
-测试代码：
+实例代码片段
 
 ```py
-def test_elements_xpath(self):
+def test_find_element_link_text(browser: webdriver.Edge):
     """
-    @todo: 通过xpath定位元素列表，测试获取列表的数据
-    @return:
+    通过 LINK_TEXT 定位元素
+
+    参数:
+        browser (webdriver.Edge): Edge浏览器, 已打开测试页面
+
+    返回值:
+        无
     """
-    browser = webdriver.Chrome(service=self.service)
-    browser.get('https://fund.eastmoney.com/data/fundranking.html#tall')
-    # 使用xpath定位列表
-    elements = browser.find_elements(by=By.XPATH, value='//table[@id="dbtable"]/tbody/tr/td[3]/a')
-    for elem in elements:
-        print(elem.text)
-    # 页面加载完后，再等待2秒，自动关闭浏览器，这里没有使用quit()方法，也能自动释放
+    # 查找标签的 LINK_TEXT 属性="链接"的元素列表
+    alinks = browser.find_elements(by=By.LINK_TEXT, value="链接")
+    print("查找到 LINK_TEXT='链接' 元素的数量:", len(alinks))
+    # 注：find_element方法在没找到对象时会出NoSuchElementException异常
+    alink = browser.find_element(by=By.LINK_TEXT, value="链接")
+    for alink in alinks:
+        print("[index]", alinks.index(alink))
+        print("[tag_name]", alink.tag_name)
+        print("[class]", alink.get_attribute("class"))
+        print("[value]", alink.get_attribute("value"))
+        print("[text]", alink.text)
+    print()
+    # 等待2秒后继续
     time.sleep(2)
-    browser.quit()
-    pass
+
+test_find_element_link_text(browser=browser)
 
 ```
 
-运行运行
-打印结果：
+代码输出
 
+```shell:no-line-numbers
+查找到 LINK_TEXT='链接' 元素的数量: 1
+[index] 0
+[tag_name] a
+[class] demo-a
+[value] None
+[text] 链接
+```
 
-取数据单个和多个的区别
-find_element：
-定位的是元素的对象，定位不到报错
+### 5. 通过 `By.PARTIAL_LINK_TEXT` 定位
 
-find_elements：
-定位的是列表，列表里面存元素对象，如果定位不到则是空的数据
+实例代码片段
+
+```py
+def test_find_element_partial_link_text(browser: webdriver.Edge):
+    """
+    通过 PARTIAL_LINK_TEXT 定位元素
+
+    参数:
+        browser (webdriver.Edge): Edge浏览器, 已打开测试页面
+
+    返回值:
+        无
+    """
+    # 查找标签的 PARTIAL_LINK_TEXT 属性="链接"的元素列表
+    alinks = browser.find_elements(by=By.PARTIAL_LINK_TEXT, value="链接")
+    print("查找到 PARTIAL_LINK_TEXT='链接' 元素的数量:", len(alinks))
+    # 注：find_element方法在没找到对象时会出NoSuchElementException异常
+    alink = browser.find_element(by=By.PARTIAL_LINK_TEXT, value="链接")
+    for alink in alinks:
+        print("[index]", alinks.index(alink))
+        print("[tag_name]", alink.tag_name)
+        print("[class]", alink.get_attribute("class"))
+        print("[value]", alink.get_attribute("value"))
+        print("[text]", alink.text)
+    print()
+    # 等待2秒后继续
+    time.sleep(2)
+
+test_find_element_partial_link_text(browser=browser)
+
+```
+
+代码输出
+
+```shell:no-line-numbers
+查找到 PARTIAL_LINK_TEXT='链接' 元素的数量: 4
+[index] 0
+[tag_name] a
+[class] demo-a
+[value] None
+[text] 链接
+[index] 1
+[tag_name] a
+[class] demo-a
+[value] None
+[text] 提交链接A
+[index] 2
+[tag_name] a
+[class] demo-a
+[value] None
+[text] 录入链接B
+[index] 3
+[tag_name] a
+[class] demo-a
+[value] None
+[text] 保存链接C
+```
+
+### 6. 通过 `By.NAME` 定位
+
+实例代码片段
+
+```py
+def test_find_element_name(browser: webdriver.Edge):
+    """
+    通过 NAME 定位元素
+
+    参数:
+        browser (webdriver.Edge): Edge浏览器, 已打开测试页面
+
+    返回值:
+        无
+    """
+    # 查找标签的 NAME 属性="_name"的元素列表
+    names = browser.find_elements(by=By.NAME, value="_name")
+    print("查找到 NAME='_name' 元素的数量:", len(names))
+    # 注：find_element方法在没找到对象时会出NoSuchElementException异常
+    name = browser.find_element(by=By.NAME, value="_name")
+    for name in names:
+        print("[index]", names.index(name))
+        print("[tag_name]", name.tag_name)
+        print("[class]", name.get_attribute("class"))
+        print("[value]", name.get_attribute("value"))
+        print("[text]", name.text)
+    print()
+    # 等待2秒后继续
+    time.sleep(2)
+
+test_find_element_name(browser=browser)
+
+```
+
+代码输出
+
+```shell:no-line-numbers
+查找到 NAME='_name' 元素的数量: 1
+[index] 0
+[tag_name] input
+[class] demo-search
+[value] 小钟同学
+[text]
+```
+
+### 7. 通过 `By.TAG_NAME` 定位
+
+实例代码片段
+
+```py
+def test_find_element_tag_name(browser: webdriver.Edge):
+    """
+    通过 TAG_NAME 定位元素
+
+    参数:
+        browser (webdriver.Edge): Edge浏览器, 已打开测试页面
+
+    返回值:
+        无
+    """
+    # 查找标签的 TAG_NAME 属性="button"的元素列表
+    buttons = browser.find_elements(by=By.TAG_NAME, value="button")
+    print("查找到 TAG_NAME='button' 元素的数量:", len(buttons))
+    # 注：find_element方法在没找到对象时会出NoSuchElementException异常
+    button = browser.find_element(by=By.TAG_NAME, value="button")
+    for button in buttons:
+        print("[index]", buttons.index(button))
+        print("[tag_name]", button.tag_name)
+        print("[class]", button.get_attribute("class"))
+        print("[value]", button.get_attribute("value"))
+        print("[text]", button.text)
+    print()
+    # 等待2秒后继续
+    time.sleep(2)
+
+test_find_element_tag_name(browser=browser)
+
+```
+
+代码输出
+
+```shell:no-line-numbers
+查找到 TAG_NAME='button' 元素的数量: 6
+[index] 0
+[tag_name] button
+[class] vp-toggle-sidebar-button
+[value] 
+[text]
+[index] 1
+[tag_name] button
+[class] vp-color-mode-switch
+[value]
+[text]
+[index] 2
+[tag_name] button
+[class] vp-toggle-navbar-button
+[value]
+[text] 
+[index] 3
+[tag_name] button
+[class] print-button
+[value] 
+[text]
+[index] 4
+[tag_name] button
+[class] 
+[value]
+[text] 提交到百度搜索
+[index] 5
+[tag_name] button
+[class]
+[value]
+[text] 这是个按钮
+```
+
+### 8. 通过 `By.CSS_SELECTOR` 定位
+
+实例代码片段
+
+```py
+def test_find_element_css_selector(browser: webdriver.Edge):
+    """
+    通过 CSS_SELECTOR 定位元素
+
+    参数:
+        browser (webdriver.Edge): Edge浏览器, 已打开测试页面
+
+    返回值:
+        无
+    """
+    # 查找标签的 CSS_SELECTOR 属性=".demo-a"的元素列表
+    alinks = browser.find_elements(by=By.CSS_SELECTOR, value=".demo-a")
+    print("查找到 CSS_SELECTOR='.demo-a' 元素的数量:", len(alinks))
+    # 注：find_element方法在没找到对象时会出NoSuchElementException异常
+    alink = browser.find_element(by=By.CSS_SELECTOR, value=".demo-a")
+    for alink in alinks:
+        print("[index]", alinks.index(alink))
+        print("[tag_name]", alink.tag_name)
+        print("[class]", alink.get_attribute("class"))
+        print("[value]", alink.get_attribute("value"))
+        print("[text]", alink.text)
+    print()
+    # 等待2秒后继续
+    time.sleep(2)
+
+test_find_element_css_selector(browser=browser)
+
+```
+
+代码输出
+
+```shell:no-line-numbers
+查找到 CSS_SELECTOR='.demo-a' 元素的数量: 4
+[index] 0
+[tag_name] a
+[class] demo-a
+[value] None
+[text] 链接
+[index] 1
+[tag_name] a
+[class] demo-a
+[value] None
+[text] 提交链接A
+[index] 2
+[tag_name] a
+[class] demo-a
+[value] None
+[text] 录入链接B
+[index] 3
+[tag_name] a
+[class] demo-a
+[value] None
+[text] 保存链接C
+```
 
 ## 元素操作
 获取元素的文本内容和属性值
